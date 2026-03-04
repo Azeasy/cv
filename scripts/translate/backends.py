@@ -5,11 +5,11 @@ import urllib.parse
 import urllib.request
 
 
-def translate_deepl(texts: list[str], api_key: str) -> list[str]:
+def translate_deepl(texts: list[str], api_key: str, target_lang: str) -> list[str]:
     endpoint = "https://api-free.deepl.com/v2/translate"
     # Header-based auth (DeepL-Auth-Key) per 2025 deprecation of legacy form-body auth_key.
     data = urllib.parse.urlencode(
-        [("target_lang", "RU")] + [("text", t) for t in texts],
+        [("target_lang", target_lang.upper())] + [("text", t) for t in texts],
     ).encode()
     req = urllib.request.Request(
         endpoint,
@@ -25,7 +25,7 @@ def translate_deepl(texts: list[str], api_key: str) -> list[str]:
     return [t["text"] for t in result["translations"]]
 
 
-def translate_openai(texts: list[str], api_key: str) -> list[str]:
+def translate_openai(texts: list[str], api_key: str, target_lang: str) -> list[str]:
     endpoint = "https://api.openai.com/v1/chat/completions"
     translations = []
     for text in texts:
@@ -35,10 +35,10 @@ def translate_openai(texts: list[str], api_key: str) -> list[str]:
                 {
                     "role": "system",
                     "content": (
-                        "You are a professional translator. Translate the following "
-                        "CV bullet point from English to Russian. Return only the "
-                        "translated text, preserving LaTeX commands (\\textbf{}, etc.) "
-                        "exactly as-is."
+                        f"You are a professional translator. Translate the following "
+                        f"CV bullet point from English to {target_lang.upper()}. "
+                        f"Return only the translated text, preserving LaTeX commands "
+                        f"(\\textbf{{}}, etc.) exactly as-is."
                     ),
                 },
                 {"role": "user", "content": text},

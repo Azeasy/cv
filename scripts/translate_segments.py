@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
-Build a Russian CV preview using DeepL (or OpenAI) and a translation memory.
+Build a translated CV preview using DeepL (or OpenAI) and a translation memory.
 
 Reads  : latex/main.tex
-Writes : latex/main.generated.tex   (preview — gitignored)
-         scripts/translations_ru.json (translation memory — committed)
+Writes : latex/main.generated.<lang>.tex   (preview — gitignored)
+         translations/<lang>.json          (translation memory — committed)
 
-Never touches latex/main_ru.tex (manually maintained).
+Never touches latex/main_<lang>.tex (manually maintained).
 
 Usage:
-    python scripts/translate_segments.py
-    python scripts/translate_segments.py --backend openai
-    python scripts/translate_segments.py --force
+    python scripts/translate_segments.py                  # Russian (default)
+    python scripts/translate_segments.py --lang IT        # Italian
+    python scripts/translate_segments.py --lang DE --backend openai
+    python scripts/translate_segments.py --force          # re-translate all
 
 Environment:
     DEEPL_API_KEY   required for --backend deepl (default)
@@ -33,6 +34,10 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
+        "--lang", default="RU", metavar="CODE",
+        help="Target language DeepL code (e.g. RU, IT, DE, FR, ES). Default: RU",
+    )
+    parser.add_argument(
         "--backend", choices=["deepl", "openai"], default="deepl",
         help="Translation API to use (default: deepl)",
     )
@@ -41,7 +46,7 @@ def main() -> None:
         help="Re-translate all segments, overwriting existing TM entries",
     )
     args = parser.parse_args()
-    run(args.backend, args.force)
+    run(args.backend, args.force, args.lang)
 
 
 if __name__ == "__main__":

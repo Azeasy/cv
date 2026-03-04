@@ -1,7 +1,12 @@
-name: Generate RU Translation Preview
+name: Generate Translation Preview
 
 on:
   workflow_dispatch:
+    inputs:
+      lang:
+        description: 'Target language DeepL code (e.g. RU, IT, DE, FR, ES)'
+        required: true
+        default: 'RU'
 
 jobs:
   translate:
@@ -22,13 +27,13 @@ jobs:
       - name: Run translation script
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-        run: python scripts/translate_segments.py
+        run: python scripts/translate_segments.py --lang ${{ inputs.lang }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: translation-preview
+          name: translation-preview-${{ inputs.lang }}
           path: |
-            latex/main.generated.tex
-            scripts/translations_ru.json
+            latex/main.generated.${{ inputs.lang }}.tex
+            translations/${{ inputs.lang }}.json
           retention-days: 14

@@ -37,6 +37,7 @@ jobs:
             texlive-fonts-recommended \
             texlive-fonts-extra \
             texlive-lang-cyrillic \
+            texlive-lang-european \
             latexmk
 
       - name: Build EN CV
@@ -46,19 +47,42 @@ jobs:
             echo "ERROR: EN PDF was not produced" && exit 1
           fi
 
-      - name: Build RU CV
+      - name: Build language variants
         run: |
-          latexmk -pdf -interaction=nonstopmode -output-directory=build latex/main_ru.tex
-          if [ ! -f build/main_ru.pdf ]; then
-            echo "ERROR: RU PDF was not produced" && exit 1
-          fi
+          for tex in latex/main_*.tex; do
+            [ -f "$tex" ] || continue
+            lang=$(basename "$tex" .tex | sed 's/main_//')
+            echo "Building $lang CV from $tex…"
+            latexmk -pdf -interaction=nonstopmode -output-directory=build "$tex"
+            if [ ! -f "build/main_${lang}.pdf" ]; then
+              echo "ERROR: ${lang} PDF was not produced" && exit 1
+            fi
+          done
 
       - name: Assemble site
         run: |
-          mkdir -p site/ru
-          cp build/main.pdf    site/cv.pdf
-          cp build/main_ru.pdf site/ru/cv.pdf
-          cat > site/index.html <<'EOF'
+          mkdir -p site
+
+          # EN at root
+          cp build/main.pdf site/cv.pdf
+
+          # Language variants in subdirectories
+          for tex in latex/main_*.tex; do
+            [ -f "$tex" ] || continue
+            lang=$(basename "$tex" .tex | sed 's/main_//')
+            mkdir -p "site/${lang}"
+            cp "build/main_${lang}.pdf" "site/${lang}/cv.pdf"
+          done
+
+          # Generate index.html dynamically
+          LANG_LINKS=""
+          for tex in latex/main_*.tex; do
+            [ -f "$tex" ] || continue
+            lang=$(basename "$tex" .tex | sed 's/main_//')
+            LANG_LINKS="${LANG_LINKS}<a href=\"${lang}/cv.pdf\">CV (${lang^^})</a>"$'\n'
+          done
+
+          cat > site/index.html <<EOF
           <!DOCTYPE html>
           <html lang="en">
           <head>
@@ -77,8 +101,8 @@ jobs:
           <body>
             <h1>Azizzhan Supiyev</h1>
             <p>Software Engineer</p>
-            <a href="cv.pdf">Download CV (English)</a>
-            <a href="ru/cv.pdf">Скачать резюме (Русский)</a>
+            <a href="cv.pdf">CV (EN)</a>
+          ${LANG_LINKS}
           </body>
           </html>
           EOF
