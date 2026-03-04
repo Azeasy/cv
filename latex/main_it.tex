@@ -1,0 +1,161 @@
+
+%-------------------------
+% Resume in LaTeX
+% Author: Azizzhan Supiyev (adapted from Jake's Resume template)
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[italian,english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,      % paint the text (instead of putting boxes)
+  urlcolor=NavyBlue,    % colour for \href and URLs
+  linkcolor=NavyBlue,   % internal links (section refs, etc.)
+  citecolor=NavyBlue    % bibliography links
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+\selectlanguage{italian}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Azizzhan Supiyev} \\ \vspace{1pt}
+    \small Software Engineer \\
+    \href{mailto:azeasy19@gmail.com}{azeasy19@gmail.com} $|$
+    \href{https://linkedin.com/in/azeasy}{LinkedIn} $|$
+    \href{https://github.com/azeasy}{GitHub} $|$
+    Telegram: \href{https://t.me/azeasy}{@azeasy}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Sommario}
+Ingegnere software esperto specializzato in \textbf{Python/Django}, API REST e architetture scalabili. Competenze comprovate nell'integrazione di sistemi complessi (OpenAI, Google, LinkedIn, API Gekata), nella progettazione di pipeline di dati e nell'applicazione di un solido ragionamento matematico per fornire soluzioni robuste.
+
+%-----------EXPERIENCE-----------
+\section{Esperienza}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Akhter Studios}{novembre 2023 - febbraio 2026}
+{Ingegnere informatico}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{\textbf{Introdex}: integrazione di Google, LinkedIn e altre API; ricerca ottimizzata tramite normalizzazione e indicizzazione del database legacy, velocità di ricerca ridotta da 5-7 secondi a meno di 300 ms.}
+    \resumeItem{\textbf{MyStudy}: Sviluppo di una piattaforma educativa e di un motore di generazione di test basato sull'intelligenza artificiale, ottimizzazione dei prompt per il modello a basso costo al fine di ridurre le allucinazioni e aumentare la precisione.}
+    \resumeItem{\textbf{AI Vendor Discovery Agent}: Progettazione di un chatbot basato su Django utilizzando Llama 3 con funzionalità personalizzate di richiamo degli strumenti per automatizzare l'abbinamento dei fornitori e le query complesse del database tramite Telegram o WhatsApp.}
+    \resumeItem{Tecnologia: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLM (OpenAI, xAI, LLama)}
+\resumeItemListEnd
+
+\resumeSubheading
+{Adal-Meteo}{Gennaio 2020 - Ottobre 2023}
+{Ingegnere informatico}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{Sviluppo di API REST, pipeline ETL e dashboard in tempo reale per il monitoraggio ecologico.}
+    \resumeItem{Implementato un servizio ETL con dashboard visivi per il confronto dei sistemi di previsione.}
+    \resumeItem{Ha gestito i server locali e fornito assistenza al portale meteorologico governativo.}
+    \resumeItem{Tecnologia: Django, Flask, server TCP, PostgreSQL, Docker, Python Dash.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Alem Research}{Gennaio 2019 - Gennaio 2020}
+{Ingegnere informatico}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{Progettazione di una pipeline ETL microservizio per il monitoraggio dei media utilizzando RabbitMQ, Redis, Solr.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Istruzione}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Università di Padova}{Ottobre 2022 - Luglio 2023}
+{Laurea Magistrale in Matematica (Algebra e Geometria) - Padova, Italia}
+\resumeSubheading
+{Università tecnica kazako-britannica}{agosto 2017 - giugno 2021}
+{Laurea in Matematica Applicata}{Almaty, Kazakistan}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Competenze tecniche}
+\resumeSubHeadingListStart
+\resumeItem{Lingue: Python (esperto), Golang (conoscenza di base)}
+\resumeItem{Framework: Django, DRF, Flask, }
+\resumeItem{Database: PostgreSQL, Redis, MongoDB}
+\resumeItem{Strumenti: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest}
+\resumeItem{Altro: API REST, pipeline ETL, server TCP, NumPy, pandas}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & TRAINING.-----------
+\section{Certificazioni e formazione}
+\resumeSubHeadingListStart
+\resumeItem{Programma di formazione Epam Data Engineering: Databricks, PySpark, pipeline ETL}
+\resumeItem{Percorso Ozon256: Golang, grpc, microservizi, Kafka, concorrenza, osservabilità}
+\resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------
+\section{Lingue}
+\resumeSubHeadingListStart
+\resumeItem{Inglese (C1), Russo (Fluente), Kazako (B2), Italiano (B1)}
+\resumeSubHeadingListEnd
+
+\end{document}

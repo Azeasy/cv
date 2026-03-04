@@ -1,0 +1,194 @@
+{
+  "05535ecff78e": {
+    "en": "Summary",
+    "it": "Sommario",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "647447b00604": {
+    "en": "Experienced Software Engineer specializing in \\textbf{Python/Django}, REST APIs, and scalable architectures. Proven at integrating complex systems (OpenAI, Google, LinkedIn, Gekata APIs), designing data pipelines, and applying strong mathematical reasoning to deliver robust solutions.",
+    "it": "Ingegnere software esperto specializzato in \\textbf{Python/Django}, API REST e architetture scalabili. Competenze comprovate nell'integrazione di sistemi complessi (OpenAI, Google, LinkedIn, API Gekata), nella progettazione di pipeline di dati e nell'applicazione di un solido ragionamento matematico per fornire soluzioni robuste.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "f96da029a6da": {
+    "en": "Experience",
+    "it": "Esperienza",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "c2bd6b0ee203": {
+    "en": "Akhter Studios}{Nov 2023 -- Feb 2026",
+    "it": "Akhter Studios}{novembre 2023 - febbraio 2026",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "15e4e47e51db": {
+    "en": "Software Engineer}{Almaty, KZ",
+    "it": "Ingegnere informatico}{Almaty, KZ",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "d574aa405dbb": {
+    "en": "\\textbf{Introdex}: Integrated Google, LinkedIn, and other APIs; optimized search by normalizing and indexing legacy database, search speed went down from 5-7 second to under 300ms.",
+    "it": "\\textbf{Introdex}: integrazione di Google, LinkedIn e altre API; ricerca ottimizzata tramite normalizzazione e indicizzazione del database legacy, velocità di ricerca ridotta da 5-7 secondi a meno di 300 ms.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "50bf5a6d8efe": {
+    "en": "\\textbf{MyStudy}: Developed educational platform and AI‑powered test generation engine, optimized prompts to the low-cost model to reduce hallucinations and increase accuracy.",
+    "it": "\\textbf{MyStudy}: Sviluppo di una piattaforma educativa e di un motore di generazione di test basato sull'intelligenza artificiale, ottimizzazione dei prompt per il modello a basso costo al fine di ridurre le allucinazioni e aumentare la precisione.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "dca20e487a58": {
+    "en": "\\textbf{AI Vendor Discovery Agent}: Engineered a Django-based chatbot using Llama 3 with custom tool-calling capabilities to automate vendor matching and complex database queries via Telegram or WhatsApp.",
+    "it": "\\textbf{AI Vendor Discovery Agent}: Progettazione di un chatbot basato su Django utilizzando Llama 3 con funzionalità personalizzate di richiamo degli strumenti per automatizzare l'abbinamento dei fornitori e le query complesse del database tramite Telegram o WhatsApp.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "192f290c6c24": {
+    "en": "Tech: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLMs (OpenAI, xAI, LLama)",
+    "it": "Tecnologia: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLM (OpenAI, xAI, LLama)",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "26fb8a81ae72": {
+    "en": "Adal-Meteo}{Jan 2020 -- Oct 2023",
+    "it": "Adal-Meteo}{Gennaio 2020 - Ottobre 2023",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "20b139082a0a": {
+    "en": "Built REST APIs, ETL pipelines, and real‑time dashboards for ecological monitoring.",
+    "it": "Sviluppo di API REST, pipeline ETL e dashboard in tempo reale per il monitoraggio ecologico.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "0522a6bdb502": {
+    "en": "Implemented an ETL service with visual dashboards for forecasting systems comparison.",
+    "it": "Implementato un servizio ETL con dashboard visivi per il confronto dei sistemi di previsione.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "ee5b5c21276e": {
+    "en": "Maintained on‑prem servers and supported government weather portal.",
+    "it": "Ha gestito i server locali e fornito assistenza al portale meteorologico governativo.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "6003c51726fe": {
+    "en": "Tech: Django, Flask, TCP servers, PostgreSQL, Docker, Python Dash.",
+    "it": "Tecnologia: Django, Flask, server TCP, PostgreSQL, Docker, Python Dash.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "c665efe9e009": {
+    "en": "Alem Research}{Jan 2019 -- Jan 2020",
+    "it": "Alem Research}{Gennaio 2019 - Gennaio 2020",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "24ef4a247c6b": {
+    "en": "Designed microservice ETL pipeline for media monitoring using RabbitMQ, Redis, Solr.",
+    "it": "Progettazione di una pipeline ETL microservizio per il monitoraggio dei media utilizzando RabbitMQ, Redis, Solr.",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "24e7451df05e": {
+    "en": "Education",
+    "it": "Istruzione",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "89971b5048ae": {
+    "en": "University of Padua}{Oct 2022 -- Jul 2023",
+    "it": "Università di Padova}{Ottobre 2022 - Luglio 2023",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "5dbf39f8678b": {
+    "en": "MSc Mathematics (Algebra \\& Geometry)}{Padua, Italy",
+    "it": "Laurea Magistrale in Matematica (Algebra e Geometria) - Padova, Italia",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "2a555613c6c7": {
+    "en": "Kazakh-British Technical University}{Aug 2017 -- Jun 2021",
+    "it": "Università tecnica kazako-britannica}{agosto 2017 - giugno 2021",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "4e1a83c7e7c3": {
+    "en": "BSc Applied Mathematics}{Almaty, Kazakhstan",
+    "it": "Laurea in Matematica Applicata}{Almaty, Kazakistan",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "5de1270fc855": {
+    "en": "Technical Skills",
+    "it": "Competenze tecniche",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "de67b523dccd": {
+    "en": "Languages: Python (expert), Golang (familiar)",
+    "it": "Lingue: Python (esperto), Golang (conoscenza di base)",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "402696ff8669": {
+    "en": "Frameworks: Django, DRF, Flask, ",
+    "it": "Framework: Django, DRF, Flask, ",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "d73f50bf8573": {
+    "en": "Databases: PostgreSQL, Redis, MongoDB",
+    "it": "Database: PostgreSQL, Redis, MongoDB",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "de06b4ee9b77": {
+    "en": "Tools: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest",
+    "it": "Strumenti: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "4ada8768d642": {
+    "en": "Other: REST APIs, ETL pipelines, TCP servers, NumPy, pandas",
+    "it": "Altro: API REST, pipeline ETL, server TCP, NumPy, pandas",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "11fafb361322": {
+    "en": "Certifications \\& Training",
+    "it": "Certificazioni e formazione",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "34660a123e27": {
+    "en": "Epam Data Engineering Training Program: Databricks, PySpark, ETL pipelines",
+    "it": "Programma di formazione Epam Data Engineering: Databricks, PySpark, pipeline ETL",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "52147877ebeb": {
+    "en": "Ozon route256 course: Golang, grpc, microservices, Kafka, concurrency, observability",
+    "it": "Percorso Ozon256: Golang, grpc, microservizi, Kafka, concorrenza, osservabilità",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "0265a28be8ae": {
+    "en": "Languages",
+    "it": "Lingue",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "c9f7c05ce256": {
+    "en": "English (C1), Russian (Fluent), Kazakh (B2), Italian (B1)",
+    "it": "Inglese (C1), Russo (Fluente), Kazako (B2), Italiano (B1)",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  }
+}
