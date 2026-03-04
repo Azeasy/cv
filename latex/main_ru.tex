@@ -1,0 +1,160 @@
+%-------------------------
+% Резюме на LaTeX (Russian)
+% Author: Azizzhan Supiyev (Jake's Resume template)
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[russian,english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,      % paint the text (instead of putting boxes)
+  urlcolor=NavyBlue,    % colour for \href and URLs
+  linkcolor=NavyBlue,   % internal links (section refs, etc.)
+  citecolor=NavyBlue    % bibliography links
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+
+\titleformat{\section}{
+  \vspace{-4pt}\selectlanguage{russian}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+\selectlanguage{russian}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Азизжан Супиев} \\ \vspace{1pt}
+    \small Программист-разработчик \\
+    \href{mailto:azeasy19@gmail.com}{azeasy19@gmail.com} $|$
+    \href{https://linkedin.com/in/azeasy}{LinkedIn} $|$
+    \href{https://github.com/azeasy}{GitHub} $|$
+    Telegram: \href{https://t.me/azeasy}{@azeasy}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Профиль}
+Опытный разработчик, специализирующийся на \textbf{Python/Django}, REST API и масштабируемых архитектурах. Имею опыт интеграции сложных систем (OpenAI, Google, LinkedIn, Gekata API), разработки конвейеров данных и применения глубокой математической базы для создания надёжных решений.
+
+%-----------EXPERIENCE-----------
+\section{Опыт работы}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Akhter Studios}{Ноя 2023 -- Феб 2026}
+{Программист-разработчик}{Алматы, Казахстан}
+\resumeItemListStart
+    \resumeItem{\textbf{Introdex}: интегрировал API Google, LinkedIn, Gekata; оптимизировал поиск в устаревшей БД, снизив скорость загрузки с 5-7 секунд до 300мс.}
+    \resumeItem{\textbf{MyStudy}: разработал образовательную платформу и движок генерации тестов на базе ИИ, оптимизировал промпты к low-cost модели, чтобы убрать галлюцинации и увеличить точность.}
+    \resumeItem{\textbf{AI Vendor Discovery Agent}: Разработал чат-бота на базе Django с использованием Llama 3 и настраиваемых функций вызова инструментов для автоматизации подбора поставщиков и сложных запросов к базе данных через Telegram или WhatsApp.}
+    \resumeItem{Технологии: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLMs (OpenAI, xAI, LLama)}
+\resumeItemListEnd
+
+\resumeSubheading
+{Adal‑Meteo}{Янв 2020 -- Окт 2023}
+{Программист-разработчик}{Алматы, Казахстан}
+\resumeItemListStart
+    \resumeItem{Разрабатывал REST API, ETL‑конвейеры и панели реального времени для экологического мониторинга.}
+    \resumeItem{Реализовал сервис ETL с визуальными панелями для сравнения систем прогнозов.}
+    \resumeItem{Поддерживал локальные серверы и государственный портал погоды.}
+    \resumeItem{Технологии: Django, Flask, TCP‑сервера, PostgreSQL, Docker, Python Dash.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Alem Research}{Янв 2019 -- Янв 2020}
+{Программист-разработчик}{Алматы, Казахстан}
+\resumeItemListStart
+    \resumeItem{Разработал микросервисный ETL‑конвейер для медиа‑мониторинга c RabbitMQ, Redis, Solr.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Образование}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Университет Падуи}{Окт 2022 -- Июл 2023}
+{Магистр математики (алгебра и геометрия)}{Падуя, Италия}
+\resumeSubheading
+{Казахско‑Британский технический университет}{Авг 2017 -- Июн 2021}
+{Бакалавр прикладной математики}{Алматы, Казахстан}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Технические навыки}
+\resumeSubHeadingListStart
+\resumeItem{Языки: Python (эксперт), Golang (базовый)}
+\resumeItem{Фреймворки: Django, DRF, Flask}
+\resumeItem{Базы данных: PostgreSQL, Redis, MongoDB}
+\resumeItem{Инструменты: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest}
+\resumeItem{Другое: REST API, ETL‑конвейеры, TCP‑сервера, NumPy, pandas}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & TRAINING.-----------
+\section{Курсы и сертификаты}
+\resumeSubHeadingListStart
+\resumeItem{Курс от EPAM по Data Engineering: Databricks, PySpark, ETL pipelines}
+\resumeItem{Курс Ozon route256: Golang, grpc, микросервисы, Kafka, параллелизм, наблюдаемость}
+\resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------
+\section{Языки}
+\resumeSubHeadingListStart
+\resumeItem{Английский — C1, Русский — родной, Казахский — B2, Итальянский — B1}
+\resumeSubHeadingListEnd
+
+\end{document}

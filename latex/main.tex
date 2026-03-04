@@ -1,0 +1,160 @@
+
+%-------------------------
+% Resume in LaTeX
+% Author: Azizzhan Supiyev (adapted from Jake's Resume template)
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,      % paint the text (instead of putting boxes)
+  urlcolor=NavyBlue,    % colour for \href and URLs
+  linkcolor=NavyBlue,   % internal links (section refs, etc.)
+  citecolor=NavyBlue    % bibliography links
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Azizzhan Supiyev} \\ \vspace{1pt}
+    \small Software Engineer \\
+    \href{mailto:azeasy19@gmail.com}{azeasy19@gmail.com} $|$
+    \href{https://linkedin.com/in/azeasy}{LinkedIn} $|$
+    \href{https://github.com/azeasy}{GitHub} $|$
+    Telegram: \href{https://t.me/azeasy}{@azeasy}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+Experienced Software Engineer specializing in \textbf{Python/Django}, REST APIs, and scalable architectures. Proven at integrating complex systems (OpenAI, Google, LinkedIn, Gekata APIs), designing data pipelines, and applying strong mathematical reasoning to deliver robust solutions.
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Akhter Studios}{Nov 2023 -- Feb 2026}
+{Software Engineer}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{\textbf{Introdex}: Integrated Google, LinkedIn, and other APIs; optimized search by normalizing and indexing legacy database, search speed went down from 5-7 second to under 300ms.}
+    \resumeItem{\textbf{MyStudy}: Developed educational platform and AI‑powered test generation engine, optimized prompts to the low-cost model to reduce hallucinations and increase accuracy.}
+    \resumeItem{\textbf{AI Vendor Discovery Agent}: Engineered a Django-based chatbot using Llama 3 with custom tool-calling capabilities to automate vendor matching and complex database queries via Telegram or WhatsApp.}
+    \resumeItem{Tech: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLMs (OpenAI, xAI, LLama)}
+\resumeItemListEnd
+
+\resumeSubheading
+{Adal-Meteo}{Jan 2020 -- Oct 2023}
+{Software Engineer}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{Built REST APIs, ETL pipelines, and real‑time dashboards for ecological monitoring.}
+    \resumeItem{Implemented an ETL service with visual dashboards for forecasting systems comparison.}
+    \resumeItem{Maintained on‑prem servers and supported government weather portal.}
+    \resumeItem{Tech: Django, Flask, TCP servers, PostgreSQL, Docker, Python Dash.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Alem Research}{Jan 2019 -- Jan 2020}
+{Software Engineer}{Almaty, KZ}
+\resumeItemListStart
+    \resumeItem{Designed microservice ETL pipeline for media monitoring using RabbitMQ, Redis, Solr.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Padua}{Oct 2022 -- Jul 2023}
+{MSc Mathematics (Algebra \& Geometry)}{Padua, Italy}
+\resumeSubheading
+{Kazakh-British Technical University}{Aug 2017 -- Jun 2021}
+{BSc Applied Mathematics}{Almaty, Kazakhstan}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\resumeItem{Languages: Python (expert), Golang (familiar)}
+\resumeItem{Frameworks: Django, DRF, Flask, }
+\resumeItem{Databases: PostgreSQL, Redis, MongoDB}
+\resumeItem{Tools: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest}
+\resumeItem{Other: REST APIs, ETL pipelines, TCP servers, NumPy, pandas}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS & TRAINING.-----------
+\section{Certifications \& Training}
+\resumeSubHeadingListStart
+\resumeItem{Epam Data Engineering Training Program: Databricks, PySpark, ETL pipelines}
+\resumeItem{Ozon route256 course: Golang, grpc, microservices, Kafka, concurrency, observability}
+\resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\resumeSubHeadingListStart
+\resumeItem{English (C1), Russian (Fluent), Kazakh (B2), Italian (B1)}
+\resumeSubHeadingListEnd
+
+\end{document}

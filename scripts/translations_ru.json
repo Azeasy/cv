@@ -1,0 +1,194 @@
+{
+  "647447b00604": {
+    "en": "Experienced Software Engineer specializing in \\textbf{Python/Django}, REST APIs, and scalable architectures. Proven at integrating complex systems (OpenAI, Google, LinkedIn, Gekata APIs), designing data pipelines, and applying strong mathematical reasoning to deliver robust solutions.",
+    "ru": "Опытный разработчик, специализирующийся на \\textbf{Python/Django}, REST API и масштабируемых архитектурах. Имею опыт интеграции сложных систем (OpenAI, Google, LinkedIn, Gekata API), разработки конвейеров данных и применения глубокой математической базы для создания надёжных решений.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "d574aa405dbb": {
+    "en": "\\textbf{Introdex}: Integrated Google, LinkedIn, and other APIs; optimized search by normalizing and indexing legacy database, search speed went down from 5-7 second to under 300ms.",
+    "ru": "\\textbf{Introdex}: интегрировал API Google, LinkedIn, Gekata; оптимизировал поиск в устаревшей БД, снизив скорость загрузки с 5-7 секунд до 300мс.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "50bf5a6d8efe": {
+    "en": "\\textbf{MyStudy}: Developed educational platform and AI‑powered test generation engine, optimized prompts to the low-cost model to reduce hallucinations and increase accuracy.",
+    "ru": "\\textbf{MyStudy}: разработал образовательную платформу и движок генерации тестов на базе ИИ, оптимизировал промпты к low-cost модели, чтобы убрать галлюцинации и увеличить точность.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "dca20e487a58": {
+    "en": "\\textbf{AI Vendor Discovery Agent}: Engineered a Django-based chatbot using Llama 3 with custom tool-calling capabilities to automate vendor matching and complex database queries via Telegram or WhatsApp.",
+    "ru": "\\textbf{AI Vendor Discovery Agent}: Разработал чат-бота на базе Django с использованием Llama 3 и настраиваемых функций вызова инструментов для автоматизации подбора поставщиков и сложных запросов к базе данных через Telegram или WhatsApp.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "192f290c6c24": {
+    "en": "Tech: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLMs (OpenAI, xAI, LLama)",
+    "ru": "Технологии: Django, DRF, Asyncio, Celery, PostgreSQL, Redis, Docker, Pytest, FastAPI, LangChain, LangGraph, LLMs (OpenAI, xAI, LLama)",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "20b139082a0a": {
+    "en": "Built REST APIs, ETL pipelines, and real‑time dashboards for ecological monitoring.",
+    "ru": "Разрабатывал REST API, ETL‑конвейеры и панели реального времени для экологического мониторинга.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "0522a6bdb502": {
+    "en": "Implemented an ETL service with visual dashboards for forecasting systems comparison.",
+    "ru": "Реализовал сервис ETL с визуальными панелями для сравнения систем прогнозов.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "ee5b5c21276e": {
+    "en": "Maintained on‑prem servers and supported government weather portal.",
+    "ru": "Поддерживал локальные серверы и государственный портал погоды.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "6003c51726fe": {
+    "en": "Tech: Django, Flask, TCP servers, PostgreSQL, Docker, Python Dash.",
+    "ru": "Технологии: Django, Flask, TCP‑сервера, PostgreSQL, Docker, Python Dash.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "24ef4a247c6b": {
+    "en": "Designed microservice ETL pipeline for media monitoring using RabbitMQ, Redis, Solr.",
+    "ru": "Разработал микросервисный ETL‑конвейер для медиа‑мониторинга c RabbitMQ, Redis, Solr.",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "de67b523dccd": {
+    "en": "Languages: Python (expert), Golang (familiar)",
+    "ru": "Языки: Python (эксперт), Golang (базовый)",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "402696ff8669": {
+    "en": "Frameworks: Django, DRF, Flask, ",
+    "ru": "Фреймворки: Django, DRF, Flask",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "d73f50bf8573": {
+    "en": "Databases: PostgreSQL, Redis, MongoDB",
+    "ru": "Базы данных: PostgreSQL, Redis, MongoDB",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "de06b4ee9b77": {
+    "en": "Tools: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest",
+    "ru": "Инструменты: Celery, Asyncio, Docker, Git, RabbitMQ, Pytest",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "4ada8768d642": {
+    "en": "Other: REST APIs, ETL pipelines, TCP servers, NumPy, pandas",
+    "ru": "Другое: REST API, ETL‑конвейеры, TCP‑сервера, NumPy, pandas",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "34660a123e27": {
+    "en": "Epam Data Engineering Training Program: Databricks, PySpark, ETL pipelines",
+    "ru": "Курс от EPAM по Data Engineering: Databricks, PySpark, ETL pipelines",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "c9f7c05ce256": {
+    "en": "English (C1), Russian (Fluent), Kazakh (B2), Italian (B1)",
+    "ru": "Английский — C1, Русский — родной, Казахский — B2, Итальянский — B1",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "52147877ebeb": {
+    "en": "Ozon route256 course: Golang, grpc, microservices, Kafka, concurrency, observability",
+    "ru": "Курс Ozon route256: Golang, grpc, микросервисы, Kafka, параллелизм, наблюдаемость",
+    "source": "deepl",
+    "updated_at": "2026-03-04"
+  },
+  "05535ecff78e": {
+    "en": "Summary",
+    "ru": "Профиль",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "f96da029a6da": {
+    "en": "Experience",
+    "ru": "Опыт работы",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "24e7451df05e": {
+    "en": "Education",
+    "ru": "Образование",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "5de1270fc855": {
+    "en": "Technical Skills",
+    "ru": "Технические навыки",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "11fafb361322": {
+    "en": "Certifications \\& Training",
+    "ru": "Курсы и сертификаты",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "0265a28be8ae": {
+    "en": "Languages",
+    "ru": "Языки",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "c2bd6b0ee203": {
+    "en": "Akhter Studios}{Nov 2023 -- Feb 2026",
+    "ru": "Akhter Studios}{Ноя 2023 -- Феб 2026",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "15e4e47e51db": {
+    "en": "Software Engineer}{Almaty, KZ",
+    "ru": "Программист-разработчик}{Алматы, Казахстан",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "26fb8a81ae72": {
+    "en": "Adal-Meteo}{Jan 2020 -- Oct 2023",
+    "ru": "Adal‑Meteo}{Янв 2020 -- Окт 2023",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "c665efe9e009": {
+    "en": "Alem Research}{Jan 2019 -- Jan 2020",
+    "ru": "Alem Research}{Янв 2019 -- Янв 2020",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "89971b5048ae": {
+    "en": "University of Padua}{Oct 2022 -- Jul 2023",
+    "ru": "Университет Падуи}{Окт 2022 -- Июл 2023",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "5dbf39f8678b": {
+    "en": "MSc Mathematics (Algebra \\& Geometry)}{Padua, Italy",
+    "ru": "Магистр математики (алгебра и геометрия)}{Падуя, Италия",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "2a555613c6c7": {
+    "en": "Kazakh-British Technical University}{Aug 2017 -- Jun 2021",
+    "ru": "Казахско‑Британский технический университет}{Авг 2017 -- Июн 2021",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  },
+  "4e1a83c7e7c3": {
+    "en": "BSc Applied Mathematics}{Almaty, Kazakhstan",
+    "ru": "Бакалавр прикладной математики}{Алматы, Казахстан",
+    "source": "manual",
+    "updated_at": "2026-03-04"
+  }
+}

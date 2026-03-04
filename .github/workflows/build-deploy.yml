@@ -1,0 +1,103 @@
+name: Build & Deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache TeX Live packages
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/apt/archives
+          key: texlive-${{ runner.os }}-v1
+          restore-keys: texlive-${{ runner.os }}-
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-lang-cyrillic \
+            latexmk
+
+      - name: Build EN CV
+        run: |
+          latexmk -pdf -interaction=nonstopmode -output-directory=build latex/main.tex
+          if [ ! -f build/main.pdf ]; then
+            echo "ERROR: EN PDF was not produced" && exit 1
+          fi
+
+      - name: Build RU CV
+        run: |
+          latexmk -pdf -interaction=nonstopmode -output-directory=build latex/main_ru.tex
+          if [ ! -f build/main_ru.pdf ]; then
+            echo "ERROR: RU PDF was not produced" && exit 1
+          fi
+
+      - name: Assemble site
+        run: |
+          mkdir -p site/ru
+          cp build/main.pdf    site/cv.pdf
+          cp build/main_ru.pdf site/ru/cv.pdf
+          cat > site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Azizzhan Supiyev — CV</title>
+            <style>
+              body { font-family: system-ui, sans-serif; max-width: 600px; margin: 80px auto; padding: 0 24px; color: #1a1a1a; }
+              h1 { font-size: 1.8rem; margin-bottom: 8px; }
+              p  { color: #555; margin-bottom: 32px; }
+              a  { display: inline-block; padding: 12px 24px; background: #0d6efd; color: #fff;
+                   text-decoration: none; border-radius: 6px; margin-right: 12px; margin-bottom: 12px; }
+              a:hover { background: #0a58ca; }
+            </style>
+          </head>
+          <body>
+            <h1>Azizzhan Supiyev</h1>
+            <p>Software Engineer</p>
+            <a href="cv.pdf">Download CV (English)</a>
+            <a href="ru/cv.pdf">Скачать резюме (Русский)</a>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
