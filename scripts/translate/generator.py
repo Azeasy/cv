@@ -5,20 +5,16 @@ from pathlib import Path
 from .extractor import Segment
 from .hashing import segment_id
 
-# Maps lowercase DeepL/ISO language code → babel language name.
-# Languages not listed here skip babel patching in the generated preview.
+# Babel language patching is only needed for Cyrillic-script languages, which
+# require font encoding and hyphenation provided by texlive-lang-cyrillic (.ldf
+# files). Latin-script languages (IT, FR, DE, ES, …) render perfectly with the
+# default English babel; adding them causes "Unknown option 'italian'" errors on
+# TeX Live 2023 runners that ship only ini-based locales, not classic .ldf files.
 _BABEL_LANGS: dict[str, str] = {
     "ru": "russian",
-    "it": "italian",
-    "de": "ngerman",
-    "fr": "french",
-    "es": "spanish",
-    "pt": "portuguese",
-    "nl": "dutch",
-    "pl": "polish",
+    "uk": "ukrainian",
+    "bg": "bulgarian",
 }
-
-_BABEL_CYRILLIC: frozenset[str] = frozenset({"ru", "uk", "bg", "sr", "mk"})
 
 
 def build_tex(lines: list[str], segments: list[Segment], tm: dict, lang: str) -> list[str]:
@@ -50,13 +46,12 @@ def write_generated(lines: list[str], output_path: Path) -> None:
 # LaTeX header helpers
 # ---------------------------------------------------------------------------
 
-def _patch_babel(lines: list[str], babel_name: str, lc: str) -> list[str]:
-    provide = "" if lc in _BABEL_CYRILLIC else "provide=*,"
+def _patch_babel(lines: list[str], babel_name: str, lc: str) -> list[str]:  # noqa: ARG001
     for i, line in enumerate(lines):
         if r"\usepackage[english]{babel}" in line:
             lines[i] = line.replace(
                 r"\usepackage[english]{babel}",
-                rf"\usepackage[{provide}{babel_name},english]{{babel}}",
+                rf"\usepackage[{babel_name},english]{{babel}}",
             )
             break
     return lines

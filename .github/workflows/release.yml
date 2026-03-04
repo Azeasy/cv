@@ -47,11 +47,12 @@ jobs:
           for tex in latex/main_*.tex; do
             [ -f "$tex" ] || continue
             lang=$(basename "$tex" .tex | sed 's/main_//')
-            echo "Building $lang CV from $tex…"
-            latexmk -pdf -interaction=nonstopmode -output-directory=build "$tex"
+            echo "Building ${lang} CV from $tex…"
+            latexmk -pdf -interaction=nonstopmode -output-directory=build "$tex" || true
             if [ ! -f "build/main_${lang}.pdf" ]; then
               echo "ERROR: ${lang} PDF was not produced" && exit 1
             fi
+            echo "✓ build/main_${lang}.pdf produced"
             cp "build/main_${lang}.pdf" "cv_${lang}.pdf"
           done
 
