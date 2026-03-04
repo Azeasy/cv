@@ -18,6 +18,8 @@ _BABEL_LANGS: dict[str, str] = {
     "pl": "polish",
 }
 
+_BABEL_CYRILLIC: frozenset[str] = frozenset({"ru", "uk", "bg", "sr", "mk"})
+
 
 def build_tex(lines: list[str], segments: list[Segment], tm: dict, lang: str) -> list[str]:
     """Return a copy of lines with each segment replaced by its translation."""
@@ -33,7 +35,7 @@ def build_tex(lines: list[str], segments: list[Segment], tm: dict, lang: str) ->
 
     babel_name = _BABEL_LANGS.get(lc)
     if babel_name:
-        out = _patch_babel(out, babel_name)
+        out = _patch_babel(out, babel_name, lc)
         out = _insert_selectlanguage(out, babel_name)
 
     return out
@@ -48,12 +50,13 @@ def write_generated(lines: list[str], output_path: Path) -> None:
 # LaTeX header helpers
 # ---------------------------------------------------------------------------
 
-def _patch_babel(lines: list[str], babel_name: str) -> list[str]:
+def _patch_babel(lines: list[str], babel_name: str, lc: str) -> list[str]:
+    provide = "" if lc in _BABEL_CYRILLIC else "provide=*,"
     for i, line in enumerate(lines):
         if r"\usepackage[english]{babel}" in line:
             lines[i] = line.replace(
                 r"\usepackage[english]{babel}",
-                rf"\usepackage[{babel_name},english]{{babel}}",
+                rf"\usepackage[{provide}{babel_name},english]{{babel}}",
             )
             break
     return lines

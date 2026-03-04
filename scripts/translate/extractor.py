@@ -2,7 +2,7 @@ import re
 
 _RESUME_ITEM = re.compile(r"^(\s*\\resumeItem\{)(.*?)(\}\s*)$", re.DOTALL)
 _SECTION_LINE = re.compile(r"^(\s*\\section\{)(.*?)(\}\s*)$")
-_RESUME_SUB_LINE = re.compile(r"^(\s*\{)(.*?)(\}\s*)$")
+_RESUME_SUB_LINE = re.compile(r"^(\s*\{)([^}]*)(\}.*?)$")
 _BEGIN_DOC = re.compile(r"\\begin\{document\}")
 _END_DOC = re.compile(r"\\end\{document\}")
 
